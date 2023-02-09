@@ -1,0 +1,96 @@
+body {margin: 5%;}
+
+.logo{
+    width: 10%;
+}
+
+img{
+    width: 100%;
+}
+
+h2 {margin: 1rem 0;}
+
+.flex {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.flexColumn {
+display: flex;
+flex-direction: column;
+margin: 0 2rem;
+width: 30%;
+}
+
+#draw {
+border: solid 2px #000;
+width: 8rem;
+height: 2.5rem;
+text-align: center;
+cursor: pointer;
+position: relative;
+margin: auto;
+background-color: #04AA6D;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#draw:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  #draw:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+.number {font-size: 3rem;}
+
+.suit {width: 15rem;
+}
+
+.suit img {
+padding:.3rem;
+width: 15%;
+
+}
+
+.player {
+border: solid 1px #000;
+width: 15rem;
+height: 20rem;
+text-align:center;
+}
+
+@media only screen and (max-width: 850px) {
+
+.flex{
+flex-direction: column;
+}
+
+.flexColumn {
+margin: 1rem;
+width: 90%;
+}
+}
