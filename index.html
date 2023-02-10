@@ -1,46 +1,91 @@
+<!--war with math-->
+
 <!DOCTYPE html>
-    <html>
-     <head>
-        <meta charset="utf-8">
-        <title>War!</title>
-        <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-        <link href="resources/css/style.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     </head>
-     <body>
-      <header>
-<div class="logo">
-<img src="./resources/images/bread.jpg"/>
-</div>
-      </header>
-      <div id="practice" style="font-size:2rem;"></div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>War</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="icon" href="./images/favicon.ico.lnk" type="image/x-icon">
+    <link href="./css/style.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <img src="./images/bread.jpg" />
+      </div>
+      <h2 id="directions">You win the cards if you answer correctly. The computer wins the cards if you are wrong. To compare, click on the card that is greater. To answer a math question, type the answer into the box and click on check. If you are using integers, make sure to pay attention to positive and negative numbers.</h2>
+    </header>
+
+    <div id="practice" style="font-size:2rem;"></div>
     <div id="gameBoard" class="flex">
       <div class="flexColumn">
-<h1>War!</h1>
-<h2 id="winner"></h2>
-<div id="end">
-<h2>First Player has <span id="player1Count"></span> cards.</h2>
-<h2>Second Player has <span id="player2Count"></span> cards.</h2>
-</div>      
-</div>
-<div class="flex">
-<div id="firstPlayer" class="flexColumn player">
-<h1>First Player</h1>
-<div id="firstPlayerSuit" class="suit">
-</div>
-</div>
-<h1 id="draw">Draw</h1>
-<div id="secondPlayer" class="flexColumn player">
-   <h1>Second Player</h1>
-   <div id="secondPlayerNumber" class="number">
-   </div>
-   <div id="secondPlayerSuit" class="suit">
-    </div>
-    </div>
-    </div>
-    </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./resources/js/script.js"></script>   
-     </body>
-    </html>
+          <h1>War!</h1>
+          <h2 id="winner"></h2>
+        <div id="end">
+          <h2>Player has<span id="playerCount"></span> cards.</h2>
+          <h2>Computer has<span id="computerCount"></span> cards.</h2>
+        </div>
+        <div id="optionSection">
+          <h2 id="mathOptions" class="button">Math Options?</h2>
+            <div id="options" class="hidden">
+              <button id="compare">Compare</button><button id="arithmetic">Arithmetic</button>
+            </div>
+          <h2 id="math" class="hidden"><span id="add" class="button">ADD</span><span id="multiply" class="button">MULTIPLY</span><span id="subtract" class="button">SUBTRACT</span></h2>
+          <h2 id="integers" class="hidden" style="margin-left:1rem;">Integers?<span id="yes" class="button">YES</span><span id="no" class="button">NO</span></h2>
+        </div>
+      </div>
+
+      <div class="flex">
+
+        <div class="mobile">
+          <p class="faceCards hidden">Jack=11 Queen=12 King=13</p>
+          <p class="compareDirections hidden">Click on the card that has a greater value.</p>
+          <p class="addDirections hidden">Add the card values together.</p>
+          <p class="multiplyDirections hidden">Multiply the card values together.</p>
+          <p class="subtractDirections hidden">Find Player's card value minus Computer's card value.</p>
+          <p class="integerDirections hidden">A black suit is positive. <span style="color:red">A red suit is negative.</span></p>
+        </div>
+
+        <div id="player" class="flexColumn player">
+          <h1 id="playerName">Player</h1>
+          <div id="playerNumber" class="number">
+          </div>
+          <div id="playerSuit" class="suit flex">
+          </div>
+        </div> <!--closes player-->
+
+        <div class="flexColumn">
+         <div class="wide">
+          <p class="faceCards hidden">Jack=11 Queen=12 King=13</p>
+          <p class="compareDirections hidden">Click on the card that shows a greater amount.</p>
+          <p class="addDirections hidden">Add the card amounts together.</p>
+          <p class="multiplyDirections hidden">Multiply the card amounts together.</p>
+          <p class="subtractDirections hidden">Player's card minus Computer's card
+          <p class="integerDirections hidden">Black suit is positive. Red suit is negative.</p>
+        </div>
+
+          <input class="hidden" id="playerAnswer" type="number" align="right" size="6">
+
+          <button class="hidden" id="submit">Check</button>
+
+          <h1 id="draw">Draw</h1>
+
+        </div>
+
+        <div id="computer" class="flexColumn player">
+          <h1 id="computerName">Computer</h1>
+          <div id="computerNumber" class="number">
+          </div>
+          <div id="computerSuit" class="suit">
+          </div>
+        </div><!--closes computer-->
+      </div><!--closes card area-->
+    </div><!--closes gameboard-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,219 @@
+/*War*/
+
+body {
+  margin: 5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10%;
+}
+
+#directions{
+  display: none;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-family: Helvetica;
+}
+
+#math {
+  flex-wrap: wrap;
+}
+
+#math span {
+  padding: 10px;
+}
+
+.mobile {
+  display: none;
+}
+
+.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.winner {
+  flex-grow: 1;
+}
+
+button {
+  background-color: #4CAF50;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+span {
+  margin-left: 1rem;
+}
+
+.button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+input {
+  margin: .5rem;
+  font-size: 2rem;
+  padding: .5px;
+  width: 8rem;
+}
+
+#submit {
+    padding:.5rem;
+    margin: .5rem;
+    width: 8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#draw {
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#draw:hover {
+  opacity:90%;
+}
+
+.number {
+  font-size: 3rem;
+}
+
+.number img {
+  height: 9rem;
+  width: auto;
+}
+
+.suit {
+  width: 15rem;
+  flex-grow: 10;
+}
+
+.suit img {
+  padding:.3rem;
+  width: 15%;
+}
+
+.player {
+  border: solid 5px #000;
+  width: 15rem;
+  height: 20rem;
+  text-align:center;
+}
+
+@media only screen and (max-width: 850px) {
+
+  .logo {
+    width: 20%;
+  }
+
+  .flex{
+    flex-direction: column;
+  }
+  .flexColumn {
+    margin: 1rem;
+    width: 90%;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wide {
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body {
+    margin:0;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .player {
+    text-align:center;
+    height:11rem;
+  }
+
+  .suit img {
+    padding:.3rem;
+    width: 10%;
+  }
+
+  .number img {
+    height: 5rem;
+    width: auto;
+  }
+
+  #draw {
+    padding: 2px;
+  }
+
+  #playerName,    /*This could be made two player. You could have players input their names.*/
+  #computerName {
+    font-size: 1.5rem;
+  }
+
+}
